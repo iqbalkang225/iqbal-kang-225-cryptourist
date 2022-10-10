@@ -1,0 +1,94 @@
+.coin{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+
+    padding: 0.8rem;
+    transition: all 0.3s linear;
+}
+
+.coin:hover{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--clr-primary-dark), rgba(0, 0, 0, 0));
+}
+
+.watchlist{
+    font-size: 1.1rem;
+}
+
+.rank-group :first-child{
+    margin-right: 0.4rem;
+    transform: translateY(5%);
+}
+
+.name-group{
+    display: flex;
+    align-items: center;
+    
+    justify-self: start;
+}
+
+.logo{
+    width: 2rem;
+    background: white;
+    border-radius: 50%;
+    margin-right: 0.6rem;
+}
+
+.name-group :last-child{
+    color: var(--clr-grey);
+    text-transform: uppercase;
+    margin-left: 0.2rem;
+}
+
+.supply,
+.market-cap{
+    display: none;
+}
+
+.net{
+    border-radius: var(--radius);
+    padding: 0 0.6rem;
+    display: flex;
+    align-items: center;
+}
+
+.profit{
+    background-color: var(--clr-green);
+}
+
+.loss{
+    background-color: var(--clr-red);
+}
+
+.net span:nth-child(1){
+    font-size: 1.2rem;
+    transform: translateY(10%);
+}
+
+.watchlist-added{
+    color: var(--clr-primary);
+}
+
+@media screen and (min-width: 600px) {
+
+    .coin{
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .market-cap{
+        display: block;
+    }
+    
+}
+
+@media screen and (min-width: 700px) {
+
+    .coin{
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .supply{
+        display: block;
+    }
+    
+}

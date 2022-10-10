@@ -1,0 +1,61 @@
+.location span{
+    margin-right: 0.4rem;
+}
+
+
+.header{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--clr-grey);
+    padding: 1rem;
+}
+
+.header > * {
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.icon{
+    font-size: 1.2rem;
+    transform: translateY(25%);
+}
+
+.rank {
+    margin-left: 2.4rem;
+}
+
+.supply,
+.market-cap{
+    display: none;
+}
+
+.sorted{
+    color: var(--clr-primary);
+}
+
+@media screen and (min-width: 600px) {
+
+    .header{
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .market-cap{
+        display: block;
+    }
+    
+}
+
+@media screen and (min-width: 700px) {
+
+    .header{
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .supply{
+        display: block;
+    }
+    
+}
