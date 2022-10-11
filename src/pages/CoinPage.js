@@ -32,6 +32,7 @@ const CoinPage = () => {
             <ButtonsTab>
                 <NavLink 
                     to = ""
+                    end = {true}
                     className = { ({isActive}) => isActive ? `${styles.btn} ${styles.active}` : styles.btn }
                     > OverView </NavLink>
                 <NavLink 

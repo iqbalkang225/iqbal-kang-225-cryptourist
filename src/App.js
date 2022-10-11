@@ -17,7 +17,7 @@ function App() {
         <Route path = "/" element = {<Home />} />
 
         <Route path = ":id" element = { <CoinProvider> <CoinPage /> </CoinProvider>}>
-          <Route index  element = { <Overview /> } />
+          <Route index element = { <Overview /> } />
           <Route path = "markets" element = { <Markets /> } />
         </Route>
 
