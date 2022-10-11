@@ -27,6 +27,7 @@ const Navbar = () => {
     const onSubmitHandler = (e) => {
         e.preventDefault()
         coinsCtx.onSearch(enteredCoin)
+        toggleNavList()
         setEnteredCoin('')
         searchRef.current.focus()
     }
@@ -44,10 +45,15 @@ const Navbar = () => {
             { <BiMenuAltRight/> } 
             </button>
 
+            {
+                isOpen &&
+                <div className = {styles.backdrop}></div>
+            }
+
             <ul className = {`${styles['nav-list']} ${isOpen ? styles['show'] : ''}`}>
-                <li> <Link to = '/'> home </Link> </li>
-                <li> <Link to = '/'> news </Link> </li>
-                <li> <Link to = '/watchlist'> watchlist </Link> </li>
+                <li> <Link to = '/' onClick = {toggleNavList}> home </Link> </li>
+                <li> <Link to = '/' onClick = {toggleNavList}> news </Link> </li>
+                <li> <Link to = '/watchlist' onClick = {toggleNavList}> watchlist </Link> </li>
             </ul>      
 
             <form 

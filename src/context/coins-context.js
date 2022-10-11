@@ -58,11 +58,16 @@ const coinsReducer = (state, action) => {
             return {...state, selectedCurrency: action.value, currencySymbol: country.symbol}
         
         case "ADD_TO_WATCHLIST":
-            const coinIndex = state.watchList.findIndex(coin => coin.id === action.value.id)
-            if(coinIndex === -1) return {...state, watchList: [...state.watchList, action.value]}
-            else {
-                const filteredWatchList = state.watchList.filter(coin => coin.id !== action.value.id)
-                return {...state, watchList: filteredWatchList}
+            // const coinIndex = state.watchList.findIndex(coin => coin.id === action.value.id)
+            // if(coinIndex === -1) return {...state, watchList: [...state.watchList, action.value]}
+            // else {
+            //     const filteredWatchList = state.watchList.filter(coin => coin.id !== action.value.id)
+            //     return {...state, watchList: filteredWatchList}
+            // }
+            const coinIndex = state.coinsList.findIndex(coin => coin.id === action.value.id)
+            return {
+                ...state,
+                coinsList: [...state.coinsList,  state.coinsList[coinIndex].inWatchList = !state.coinsList[coinIndex].inWatchList ]
             }
 
     }

@@ -8,18 +8,16 @@ import { Link } from 'react-router-dom'
 
 const Coin = ( props ) => {
 
-    console.log(props)
 
+    console.log(props.inWatchList)
     const coinsCtx = useCoinsContext()
 
-    const [inWatchList, setInWatchList] = useState(false)
 
     const toggleWatchList = () => {
-        setInWatchList(prevState => !prevState)
         coinsCtx.onWatchList(props)
     }
 
-    const {id, symbol, name, image, price, marketCap, percentageChange, rank, supply} = props
+    const {id, symbol, name, image, price, marketCap, percentageChange, rank, supply, inWatchList} = props
 
     const addComma = (item) => item.toLocaleString("en-US")
 

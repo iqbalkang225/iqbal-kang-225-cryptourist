@@ -64,8 +64,8 @@ const Home = () => {
                             rank: coin['market_cap_rank'],
                             marketCap: coin['market_cap'],
                             percentageChange: coin['price_change_percentage_24h'],
-                            supply: coin['total_supply']
-                            
+                            supply: coin['total_supply'],
+                            inWatchList: coin.inWatchList
                         }
 
                         // const {id, symbol, name, image, current_price: price,
