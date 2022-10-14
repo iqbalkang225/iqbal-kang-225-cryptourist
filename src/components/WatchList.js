@@ -16,6 +16,7 @@ const WatchList = () => {
             <h3> WatchList </h3>
             <ul className = {styles.WatchList}>
                 {
+                    watchList.length < 1 ? <p> No coins in WatchList </p> :
                     watchList.map(coin => {
 
                         const coinData = {

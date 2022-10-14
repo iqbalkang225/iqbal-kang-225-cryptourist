@@ -52,7 +52,7 @@ const Navbar = () => {
 
             <ul className = {`${styles['nav-list']} ${isOpen ? styles['show'] : ''}`}>
                 <li> <Link to = '/' onClick = {toggleNavList}> home </Link> </li>
-                <li> <Link to = '/' onClick = {toggleNavList}> news </Link> </li>
+                <li> <Link to = '/' onClick = {toggleNavList} className={styles.news}> news </Link> </li>
                 <li> <Link to = '/watchlist' onClick = {toggleNavList}> watchlist </Link> </li>
             </ul>      
 

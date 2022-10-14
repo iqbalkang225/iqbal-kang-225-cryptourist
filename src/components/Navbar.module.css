@@ -22,6 +22,10 @@
     color: var(--clr-primary);
 }
 
+.news{
+    cursor: not-allowed;
+}
+
 .nav-list, 
 .search{
     position: fixed;
