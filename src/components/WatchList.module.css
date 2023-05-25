@@ -1,0 +1,10 @@
+.watchlist{
+    text-align: center;
+}
+
+.watchlist h3{
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--clr-primary);
+    display: inline-block;
+    padding-bottom: 0.4rem;
+}

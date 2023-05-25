@@ -1,0 +1,5 @@
+.buttons-tab {
+    background-color: var(--clr-primary-dark);
+    display: inline-block;
+    border-radius: var(--radius);
+}
